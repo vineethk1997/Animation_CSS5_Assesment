@@ -1,0 +1,273 @@
+body {
+  background-color: darkkhaki;
+}
+.parent-container {
+  display: flex;
+  justify-content: center;
+}
+.box {
+  height: 130px;
+  width: 110px;
+  margin-bottom: 50px;
+  margin-right: 55px;
+}
+.box1 {
+  background-color: darkslategrey;
+  border: 1px solid darkslategray;
+  animation-name: box1;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes box1 {
+  30% {
+    transform: skewX(20deg);
+  }
+  50% {
+    transform: skewX(-20deg);
+  }
+}
+
+.box2 {
+  background-color: green;
+  border: 1px solid green;
+  animation-name: box2;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes box2 {
+  30% {
+    transform: skewY(20deg);
+  }
+  50% {
+    transform: skewY(-20deg);
+  }
+}
+.box3 {
+  background-color: red;
+  border: 1px solid red;
+  animation-name: box3;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes box3 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.box4 {
+  background-color: darkred;
+  border: 1px solid darkred;
+}
+.box-a {
+  animation-name: box-a;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes box-a {
+  40% {
+    transform: scaleY(1.5);
+  }
+  60% {
+    transform: scaleY(1);
+  }
+}
+
+.box-b {
+    animation: box-b 2s ease infinite;
+  }
+  @keyframes box-b {
+   0%{
+   transform: scaleX(0.2);
+   }
+   100%{
+       transform: scaleX(1.1);
+   }
+}
+.box-c {
+  animation: box-c 4s linear infinite;
+}
+@keyframes box-c {
+  50% {
+    transform: rotateZ(180deg);
+  }
+  50% {
+    transform: rotateZ(-180deg);
+  }
+}
+.number {
+  margin-right: 30px;
+  margin-top: 30px;
+}
+
+.card{
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  margin: auto;
+  background-color: red;
+}
+
+.card1 {
+  transition: width 2s;
+}
+.card1:hover {
+  width: 300px;
+}
+.card2 {
+  transition: width 2s, height 2s;
+}
+.card2:hover {
+  width: 300px;
+  height: 300px;
+}
+.card3 {
+  transition: width 2s linear;
+}
+.card3:hover {
+  width: 300px;
+}
+.card4 {
+  transition: width 2s ease;
+}
+.card4:hover {
+  width: 300px;
+}
+.card5 {
+  transition: width 2s ease-in;
+}
+.card5:hover {
+  width: 300px;
+}
+.card6 {
+  transition: width 2s ease-out;
+}
+.card6:hover {
+  width: 300px;
+}
+.card7 {
+  transition: width 2s ease-in-out;
+}
+.card7:hover {
+  width: 300px;
+}
+.numbers{
+  margin-left: 355px;
+}
+
+.text1{
+  background-color: orange;
+}
+.text2{
+  background-color: white;
+}
+.text3{
+  background-color: green;
+}
+.nav{
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.top{
+  height: 100vh;
+  width: 100%;
+  background-image: url("./sky.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow-x: hidden;
+}
+.highway {
+  height: 200px;
+  width: 500%;
+  display: block;
+  background-image: url("./road.jpg");
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-repeat: repeat-x;
+  animation: highway 5s linear infinite;
+}
+@keyframes highway {
+  100% {
+    transform: translateX(-3000px);
+  }
+}
+.city {
+  height: 250px;
+  width: 500%;
+  background-image: url("./city.png");
+  position: absolute;
+  bottom: 200px;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: 1;
+  background-repeat: repeat-x;
+  animation: city 20s linear infinite;
+}
+
+@keyframes city {
+  100% {
+    transform: translateX(-1400px);
+  }
+}
+.car {
+  width: 400px;
+  left: 50%;
+  position: absolute;
+  bottom: 100px;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.car img {
+  width: 100%;
+  animation: car 1s linear infinite;
+}
+@keyframes car {
+  100% {
+    transform: translateY(-1px);
+  }
+  50% {
+    transform: translateY(1px);
+  }
+  0% {
+    transform: translateY(-1px);
+  }
+}
+.wheel {
+  left: 50%;
+  bottom: 178px;
+  transform: translateX(-50%);
+  position: absolute;
+  z-index: 2;
+}
+.wheel img {
+  width: 72px;
+  height: 72px;
+  animation: wheel 1s linear infinite;
+}
+.back{
+  left: -165px;
+  position: absolute;
+}
+.front{
+  left: 80px;
+  position: absolute;
+}
+
+@keyframes wheel{
+  100% {
+    transform: rotate(360deg);
+  }
+}
